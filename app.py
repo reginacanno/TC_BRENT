@@ -3,7 +3,7 @@ import pandas as pd
 from ipeadatapy import timeseries
 import matplotlib.pyplot as plt
 import numpy as np
-import previsao_preco_petrolio_diario  # Importa a lógica da segunda aba
+import previsoes  # Importa a lógica da segunda aba
 
 # Autoria no canto direito da tela, em itálico e fonte menor
 st.markdown("""
@@ -187,4 +187,4 @@ with abas[0]:
 
 # Aba 2: Previsões (Chamar lógica de outro arquivo)
 with abas[1]:
-    previsao_preco_petrolio_diario.exibir_projecoes(df)
+    previsoes.exibir_projecoes(df)
