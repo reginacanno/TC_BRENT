@@ -2,3 +2,9 @@ streamlit
 matplotlib
 pandas
 ipeadatapy
+numpy
+ipeadatapy
+previsoes
+tensorflow
+sklearn
+joblib
