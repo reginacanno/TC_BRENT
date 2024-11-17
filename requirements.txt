@@ -5,3 +5,4 @@ ipeadatapy
 numpy
 tensorflow
 joblib
+scikit-learn
