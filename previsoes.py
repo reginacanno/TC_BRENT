@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import os
 from tensorflow.keras.models import load_model
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import matplotlib.pyplot as plt
@@ -23,10 +24,11 @@ def exibir_projecoes(df=None):
     """)
 
     # Carregar o modelo
-    model = load_model(r"C:\Users\regin\Documents\Postech\Projeto-BRENT\tc-brent\modelo_lstm_brent.h5")
+    model_path = os.path.join(os.path.dirname(__file__), "modelo_lstm_brent.h5")
+    model = load_model(model_path)
 
     # Carregar os dados
-    file_path = r"C:\Users\regin\Documents\Postech\Projeto-BRENT\tc-brent\dados_treinamento.pkl"
+    file_path = os.path.join(os.path.dirname(__file__), "dados_treinamento.pkl")
     X_train, X_test, y_train, y_test, scaler = joblib.load(file_path)
 
     # Fazer previsões
