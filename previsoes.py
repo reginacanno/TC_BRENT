@@ -1,28 +1,21 @@
 import streamlit as st
-import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import previsoes
-import joblib
 from tensorflow.keras.models import load_model
-from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-from keras.models import Sequential
-from keras.layers import LSTM, Dense
+import matplotlib.pyplot as plt
+import joblib
 
-
-def exibir_projecoes():
+def exibir_projecoes(df=None):
     """
     Exibe as previsões e métricas no Streamlit.
     """
-    # Título da aba
     st.header("Projeções de Preços do Petróleo Brent")
 
     # Carregar o modelo
-    model = load_model(r"C:\Users\regin\Documents\Postech\Projeto-BRENT\modelo_lstm_brent.h5")
+    model = load_model(r"C:\Users\regin\Documents\Postech\Projeto-BRENT\tc-brent\modelo_lstm_brent.h5")
 
     # Carregar os dados
-    file_path = r"C:\Users\regin\Documents\Postech\Projeto-BRENT\dados_treinamento.pkl"
+    file_path = r"C:\Users\regin\Documents\Postech\Projeto-BRENT\tc-brent\dados_treinamento.pkl"
     X_train, X_test, y_train, y_test, scaler = joblib.load(file_path)
 
     # Fazer previsões
