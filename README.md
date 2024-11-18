@@ -5,6 +5,10 @@ Utilizamos ciência de dados, aprendizado de máquina e visualização interativ
 
 O **Streamlit** foi utilizado para criar uma interface interativa onde os usuários podem explorar os dados, realizar análises e visualizar os resultados.
 
+## Link do Dashboard
+
+https://preco-petroleo-brent.streamlit.app/
+
 ## Funcionalidades
 
 - **Exploração de Dados:** Estatísticas e visualizações detalhadas do comportamento histórico dos preços do petróleo Brent.
