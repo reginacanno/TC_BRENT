@@ -21,3 +21,6 @@ O **Streamlit** foi utilizado para criar uma interface interativa onde os usuár
   - `scikit-learn` para modelagem preditiva
   - `statsmodels` para análise estatística
   - `Streamlit` para criação da interface interativa
+ 
+## Fonte de Dados
+Utilizamos a `API Ipeadata` como fonte de dados. Essa API traz o histórico de preços do barril de petróleo Brent desde 1987 até os dias atuais.
